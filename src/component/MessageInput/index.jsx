@@ -4,7 +4,7 @@ import axios from 'axios';
 import './index.css'
 
 const MessageInput = ({ setResponse }) => {
-    // Etat local pour stocker le texte saisi
+    // Etat local pour stocker le texte saisi par l'utilisateur
     const [text, setText] = useState('');
 
     // Fonction submit

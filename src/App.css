@@ -6,7 +6,8 @@
 h1 {
   color: white;
   text-shadow: #FC0 1px 0 10px;
-  margin: 50px 0px 20px 0px;
+  margin: 50px 0px 50px 0px;
+  font-size: 3rem;
 }
 .App {
   text-align: center;
