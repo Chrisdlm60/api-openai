@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
+import './index.css'
 
 const MessageInput = ({ setResponse }) => {
     // Etat local pour stocker le texte saisi
@@ -20,15 +21,18 @@ const MessageInput = ({ setResponse }) => {
     };
   
     return (
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Entrez une phrase"
-          value={text} 
-          onChange={(e) => setText(e.target.value)}
-        />
-        <button type="submit">Envoyer</button>
-      </form>
+      <>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            id="user_text"
+            placeholder="Entrez une phrase"
+            value={text} 
+            onChange={(e) => setText(e.target.value)}
+          />
+          <button type="submit">Envoyer</button>
+        </form>
+      </>
     );
   }
 

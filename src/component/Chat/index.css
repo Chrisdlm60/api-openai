@@ -1,0 +1,12 @@
+.chat-response {
+    display: block;
+    width: 60%;
+    margin: auto
+}
+.chat-response p {
+    margin: 15px;
+    color: white;
+}
+.chat-response #ai_response {
+    color: #b68825; 
+}
