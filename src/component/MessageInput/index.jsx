@@ -3,16 +3,19 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './index.css'
 
+// solution #2
+// côté REACT
+const openaiApiKey = process.env.REACT_APP_OPENAI_API_KEY;
+
 const MessageInput = ({ setResponse }) => {
     // Etat local pour stocker le texte saisi par l'utilisateur
     const [text, setText] = useState('');
 
-    // Fonction submit
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        // Requete POST 
-        const response = await axios.post('http://localhost:5000/api/chat', { text });
+        // Requete POST via URL
+        const response = await axios.post('http://localhost:5000/api/chat', { text, apiKey: openaiApiKey });
         // Mettre à jour l'état response avec celle reçue du serveur
         setResponse(response.data.response);
       } catch (error) {
