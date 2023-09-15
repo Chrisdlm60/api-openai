@@ -15,6 +15,9 @@ const MessageInput = ({ setResponse }) => {
       e.preventDefault();
       try {
         // Requete POST via URL
+        // #1
+        // const response = await axios.post('http://localhost:5000/api/chat', { text });
+        // #2
         const response = await axios.post('http://localhost:5000/api/chat', { text, apiKey: openaiApiKey });
         // Mettre à jour l'état response avec celle reçue du serveur
         setResponse(response.data.response);

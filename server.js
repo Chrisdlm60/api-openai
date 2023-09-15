@@ -17,7 +17,11 @@ app.use(express.json()); // Utilisez le middleware express.json pour analyser le
 app.post('/api/chat', async (req, res) => {
   
   try {
-    const { text, apiKey } = req.body; // Récupération du texte à envoyer à OpenAI à partir du corps de la requête
+    // Récupération du texte à envoyer à OpenAI à partir du corps de la requête
+    // #1
+    // const { text } = req.body; 
+    // #2
+    const { text, apiKey } = req.body; 
 
     // Requête POST vers l'API OpenAI
     const response = await axios.post('https://api.openai.com/v1/engines/davinci/completions', {
